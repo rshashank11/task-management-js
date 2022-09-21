@@ -17,8 +17,6 @@ addCards.forEach((addCard) => {
         const containerIndex = addCards.indexOf(addCard);
         addCard.style.display = "none";
         addTaskContainers[containerIndex].style.display = "flex";
-
-        
     })
 })
 
@@ -35,13 +33,16 @@ saveBtns.forEach((saveBtn) => {
 
             const taskTitleEl = document.createElement("p");
             taskTitleEl.innerText = taskTitles[saveBtnIndex].value;
-            taskTitleEl.className = "task-title";
+            taskTitleEl.className = "task-title-p";
             taskContainer.appendChild(taskTitleEl);
 
             const taskDescEl = document.createElement("p");
             taskDescEl.innerText = taskDescs[saveBtnIndex].value;
-            taskDescEl.className = "task-description";
+            taskDescEl.className = "task-description-p";
             taskContainer.appendChild(taskDescEl);
+
+            taskTitles[saveBtnIndex].value = null;
+            taskDescs[saveBtnIndex].value = null;
 
             taskSections[saveBtnIndex].appendChild(taskContainer);
             addCards[saveBtnIndex].style.display = "block";

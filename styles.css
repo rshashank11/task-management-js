@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -38,6 +38,7 @@ body {
     padding: 5px;
 }
 .task-container {
+    margin-bottom: 5px;
     width: 100%;
     height: fit-content;
     background: #3a506b;
@@ -98,5 +99,18 @@ body {
     padding: 5px 0;
     border-radius: 5px;
     margin-top: 1px;
+}
+
+.task-title-p {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.task-description-p {
+    font-weight: 200;
+    font-size: 14px;
+    font: italic;
+    text-transform: capitalize;
 }
 
