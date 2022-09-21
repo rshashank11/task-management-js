@@ -23,7 +23,7 @@ body {
 }
 
 .task-section { 
-    min-height: 50vh;
+    min-height: 30vh;
     overflow: hidden;
     background: #0b132b;
     margin: 5px;
@@ -48,14 +48,13 @@ body {
 .add-card {
     align-self: flex-start;
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     border-bottom: 2px solid white;
-    border-spacing: 10px;
 }
 
 .add-task-section {
     position: relative;
-    height: 65px;
+    height: 100px;
 }
 
 .add-card-btn {
@@ -69,6 +68,35 @@ body {
     top: 0;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+}
+
+.task-input {
+    color: white;
+    font-weight: 300;
+    margin: 2px 0;
+    background: #3a506b;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    padding: 5px 0 5px 10px;
+    caret-color: white;
+    overflow-x: scroll;
+    border-radius: 5px;
+}
+
+.task-input::placeholder {
+    color: white;
+    font-weight: 300;
+}
+
+.save-button {
+    background: #026aa7;
+    outline: none;
+    border: none;
+    width: 50px;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-top: 1px;
 }
 
