@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    background: linear-gradient(120deg, #2f22ad, #c7459d);
+    color: white;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.heading {
+    margin-bottom: 10px;
+}
+
+.task-section { 
+    min-height: 50vh;
+    overflow: hidden;
+    background: #0b132b;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.task-heading {
+    text-align: center;
+    padding: 5px;
+}
+.task-container {
+    width: 100%;
+    height: fit-content;
+    background: #3a506b;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.add-card {
+    align-self: flex-start;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
+    border-spacing: 10px;
+}
+
+.add-task-section {
+    position: relative;
+    height: 65px;
+}
+
+.add-card-btn {
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+.add-task-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
