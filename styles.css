@@ -23,39 +23,41 @@ body {
 }
 
 .task-section { 
-    min-height: 30vh;
-    overflow: hidden;
-    background: #0b132b;
+    background: #1c2541;
     margin: 5px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     padding: 10px;
-
+    min-height: 40vh;
 }
 .task-heading {
     text-align: center;
     padding: 5px;
 }
 .task-container {
-    margin-bottom: 5px;
-    width: 100%;
     height: fit-content;
     background: #3a506b;
     padding: 5px 10px;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .add-card {
     align-self: flex-start;
-    width: 100%;
+    width: 90%;
     padding-bottom: 30px;
     border-bottom: 2px solid white;
+    margin: 2px 5px;
 }
 
 .add-task-section {
     position: relative;
-    height: 100px;
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 5px;
+    background: #0b132b;
+    border-radius: 5px;
 }
 
 .add-card-btn {
@@ -66,10 +68,10 @@ body {
 
 .add-task-container {
     position: absolute;
-    top: 0;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;    
+    margin: 2px 5px;
 }
 
 .task-input {
@@ -114,3 +116,18 @@ body {
     text-transform: capitalize;
 }
 
+
+
+.draggable.dragging {
+    opacity: 0.1;
+}
+
+.drag-container {
+    display: flex;
+    flex-direction: column;
+    background: #0b132b;
+    min-height: 40%; 
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
