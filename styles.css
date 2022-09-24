@@ -18,8 +18,20 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 .heading {
+    color: inherit;
+    font-family: inherit;
+    font-size: 40px;
     margin-bottom: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.heading-focus {
+    border: 1px solid white;
 }
 
 .task-section { 
@@ -91,6 +103,7 @@ body {
 .task-input::placeholder {
     color: white;
     font-weight: 300;
+    opacity: 0.3;
 }
 
 .save-button {

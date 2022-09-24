@@ -1,3 +1,4 @@
+const heading = document.querySelector(".heading");
 const taskSections = [...document.querySelectorAll(".task-section")];
 const taskTitles = [...document.querySelectorAll(".task-title")];
 const taskDescs = [...document.querySelectorAll(".task-description")];
@@ -6,6 +7,15 @@ const dragContainers = [...document.querySelectorAll(".drag-container")]
 const addCards = [...document.querySelectorAll(".add-card")];
 const addTaskContainers = [...document.querySelectorAll(".add-task-container")];
 const saveBtns = [...document.querySelectorAll(".save-button")];
+
+heading.addEventListener("dblclick", () => {
+    heading.toggleAttribute("readonly");
+})
+
+heading.addEventListener("blur", () => {
+    heading.classList.remove("heading-focus");
+})
+
 
 addTaskContainers.forEach((addTaskContainer) => {
     addTaskContainer.style.display = "none";
