@@ -31,7 +31,7 @@ body {
 }
 
 .heading-focus {
-    border: 1px solid white;
+    background: black;
 }
 
 .task-section { 
