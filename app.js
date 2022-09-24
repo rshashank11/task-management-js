@@ -2,20 +2,22 @@ const heading = document.querySelector(".heading");
 const taskSections = [...document.querySelectorAll(".task-section")];
 const taskTitles = [...document.querySelectorAll(".task-title")];
 const taskDescs = [...document.querySelectorAll(".task-description")];
-const dragContainers = [...document.querySelectorAll(".drag-container")]
+const dragContainers = [...document.querySelectorAll(".drag-container")];
 
 const addCards = [...document.querySelectorAll(".add-card")];
 const addTaskContainers = [...document.querySelectorAll(".add-task-container")];
 const saveBtns = [...document.querySelectorAll(".save-button")];
 
-document.addEventListener("DOMContentLoaded", getTasks);
+//document.addEventListener("DOMContentLoaded", getTasks);
 
 heading.addEventListener("dblclick", () => {
     heading.toggleAttribute("readonly");
+    heading.classList.add("heading-focus")
 })
 
 heading.addEventListener("blur", () => {
-    heading.classList.remove("heading-focus");
+    heading.toggleAttribute("readonly");
+    heading.classList.toggle("heading-focus");
 })
 
 
@@ -62,22 +64,23 @@ saveBtns.forEach((saveBtn) => {
             addCards[saveBtnIndex].style.display = "block";
             addTaskContainers[saveBtnIndex].style.display = "none";
 
-            saveTasks(taskTitleEl, taskDescEl, saveBtnIndex);
-        }
 
-        const draggables = document.querySelectorAll(".draggable");
-        draggables.forEach((draggable) => {
-            draggable.addEventListener("dragstart", () => {
-                draggable.classList.add("dragging");
-            });
+            const draggables = document.querySelectorAll(".draggable");
+            draggables.forEach((draggable) => {
+                draggable.addEventListener("dragstart", () => {
+                    draggable.classList.add("dragging");
+                    //removeTasks(taskTitleEl, taskDescEl, saveBtnIndex);
+                });
 
-            draggable.addEventListener("dragend", () => {
-                draggable.classList.remove("dragging");
+                draggable.addEventListener("dragend", () => {
+                    draggable.classList.remove("dragging");
+                    //saveTasks(taskTitleEl, taskDescEl, saveBtnIndex);
+                })
             })
-        });
+            //saveTasks(taskTitleEl, taskDescEl, saveBtnIndex);
+        }
     })
-})
-
+});
 
 dragContainers.forEach((dragContainer) => {
     dragContainer.addEventListener("dragover", (event) => {
@@ -111,75 +114,82 @@ function getDragUponEl(dragContainer, y) {
     }).element;
 }
 
-function saveTasks(task, desc, containerIndex) {
-    console.log(task.innerText)
-    console.log(desc.innerText)
-    console.log(containerIndex)
-    let tasksTitles, tasksDescs;
-    let containers;
+// function saveTasks(task, desc, index) {
+//     let tasks, descs;
+//     let containers;
 
-    if (localStorage.getItem("tasksTitles") === null) {
-        tasksTitles = [];
-    } else {
-        tasksTitles = JSON.parse(localStorage.getItem("tasksTitles"));
-    }
+//     if (localStorage.getItem("tasks") === null) {
+//         tasks = [];
+//     } else {
+//         tasks = JSON.parse(localStorage.getItem("tasks"));
+//     }
 
-    if (localStorage.getItem("tasksDescs") === null) {
-        tasksDescs = [];
-    } else {
-        tasksDescs = JSON.parse(localStorage.getItem("tasksDescs"));
-    }
+//     if (localStorage.getItem("descs") === null) {
+//         descs = [];
+//     } else {
+//         descs = JSON.parse(localStorage.getItem("descs"));
+//     }
 
-    if (localStorage.getItem("containers") === null) {
-        containers = [];
-    } else {
-        containers = JSON.parse(localStorage.getItem("containers"));
-    }
-    
-    tasksTitles.push(task.innerText);
-    localStorage.setItem("tasksTitles", JSON.stringify(tasksTitles));
-    tasksDescs.push(desc.innerText);
-    localStorage.setItem("tasksDescs", JSON.stringify(tasksDescs));
-    containers.push(containerIndex);
-    localStorage.setItem("containers", JSON.stringify(containers));
-}
+//     if (localStorage.getItem("containers") === null) {
+//         containers = [];
+//     } else {
+//         containers = JSON.parse(localStorage.getItem("containers"));
+//     }
 
-function getTasks() {
-    let tasksTitles, tasksDescs, containers;
-    if (localStorage.getItem("tasksTitles") === null) {
-        tasksTitles = []
-    } else {
-        tasksTitles = JSON.parse(localStorage.getItem("tasksTitles"));
-    }
+//     tasks.push(task.innerText);
+//     localStorage.setItem("tasks", JSON.stringify(tasks));
+//     descs.push(desc.innerText);
+//     localStorage.setItem("descs", JSON.stringify(descs));
+//     containers.push(index);
+//     localStorage.setItem("containers", JSON.stringify(containers));
+// }
 
-    if (localStorage.getItem("tasksDescs") === null) {
-        tasksDescs = [];
-    } else {
-        tasksDescs = JSON.parse(localStorage.getItem("tasksDescs"));
-    }
+// function changeContainer(task, desc, index) {
+//     let tasks, descs, containers;
+//     tasks = JSON.parse(localStorage.getItem("tasks"));
+//     tasks.splice(tasks.indexOf(task), 1);
+//     descs = JSON.parse(localStorage.getItem("containers"));
+//     descs.splice(descs.indexOf(desc), 1);
+//     containers = JSON.parse(localStorage.getItem("containers"));
+//     containers.splice(containers.indexOf(index), 1);
+// }
 
-    if (localStorage.getItem("containers") === null) {
-        containers = [];
-    } else {
-        containers = JSON.parse(localStorage.getItem("containers"));
-    }
+// function getTasks() {
+//     let tasks, descs, containers;
+//     if (localStorage.getItem("tasks") === null) {
+//         tasks = []
+//     } else {
+//         tasks = JSON.parse(localStorage.getItem("tasks"));
+//     }
 
-    tasksTitles.forEach((tasksTitle, index) => {
-        const taskContainer = document.createElement("div");
-        taskContainer.classList.add("task-container");
-        taskContainer.classList.add("draggable");
+//     if (localStorage.getItem("descs") === null) {
+//         descs = [];
+//     } else {
+//         descs = JSON.parse(localStorage.getItem("descs"));
+//     }
 
-        const taskTitleEl = document.createElement("p");
-        taskTitleEl.innerText = tasksTitle;
-        taskTitleEl.className = "task-title-p";
-        taskContainer.appendChild(taskTitleEl);
+//     if (localStorage.getItem("containers") === null) {
+//         containers = [];
+//     } else {
+//         containers = JSON.parse(localStorage.getItem("containers"));
+//     }
 
-        const taskDescEl = document.createElement("p");
-        taskDescEl.innerText = tasksDescs[index];
-        taskDescEl.className = "task-description-p";
-        taskContainer.appendChild(taskDescEl);
+//     tasks.forEach((task, index) => {
+//         const taskContainer = document.createElement("div");
+//         taskContainer.classList.add("task-container");
+//         taskContainer.classList.add("draggable");
 
-        taskContainer.setAttribute("draggable", true);
-        dragContainers[containers[index]].appendChild(taskContainer);
-    })
-}
+//         const taskTitleEl = document.createElement("p");
+//         taskTitleEl.innerText = task;
+//         taskTitleEl.className = "task-title-p";
+//         taskContainer.appendChild(taskTitleEl);
+
+//         const taskDescEl = document.createElement("p");
+//         taskDescEl.innerText = descs[index];
+//         taskDescEl.className = "task-description-p";
+//         taskContainer.appendChild(taskDescEl);
+
+//         taskContainer.setAttribute("draggable", true);
+//         dragContainers[containers[index]].appendChild(taskContainer);
+//     });
+// }
