@@ -37,6 +37,7 @@ addCards.forEach((addCard) => {
 saveBtns.forEach((saveBtn) => {
     saveBtn.addEventListener("click", () => {
         const saveBtnIndex = saveBtns.indexOf(saveBtn);
+        console.log(saveBtnIndex)
 
         if (taskTitles[saveBtnIndex].value === "" && taskDescs[saveBtnIndex].value === "") {
             addCards[saveBtnIndex].style.display = "block";
