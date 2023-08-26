@@ -28,7 +28,7 @@ body {
   border: none;
   outline: none;
   resize: none;
-  min-width: 500px;
+  width: 100%;
 }
 
 .heading-focus {
@@ -42,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  min-height: 40vh;
+  min-height: 270px;
 }
 .task-heading {
   text-align: center;
@@ -57,10 +57,9 @@ body {
 }
 
 .add-card {
-  align-self: flex-start;
+  text-align: center;
   width: 90%;
-  padding-bottom: 30px;
-  border-bottom: 2px solid white;
+  padding-bottom: 10px;
   margin: 2px 5px;
 }
 
