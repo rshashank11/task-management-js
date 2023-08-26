@@ -10,6 +10,7 @@
 3. Sortable drag and drop feature
 
 ## Images
-1. ![Screenshot 1](https://github.com/rshashank11/crework-trello-clone/assets/90172730/21bfd189-05eb-4764-841d-33573201f629)
-2. ![Screenshot 2](https://github.com/rshashank11/crework-trello-clone/assets/90172730/200f5840-0562-41df-bced-0a0011880f39)
+1.![Screenshot 1](https://github.com/rshashank11/task-management-js/assets/90172730/df84533f-930e-477b-9194-168c7078d848)
+2. ![Screenshot 2](https://github.com/rshashank11/task-management-js/assets/90172730/ab1a1d86-9607-4c4b-984e-fe3a1e3eb797)
+3. ![Screenshot 3](https://github.com/rshashank11/task-management-js/assets/90172730/a726a3cf-612c-4756-aa1e-5db82dcd747a)
 
