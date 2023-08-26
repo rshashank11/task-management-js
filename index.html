@@ -1,77 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./images/favicon.png" rel="icon" type="image/png" />
+    <script
+      src="https://kit.fontawesome.com/8b3c156aba.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="/styles.css" rel="stylesheet" />
+    <title>Task Management</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/8b3c156aba.js" crossorigin="anonymous"></script>
-    <link href="/styles.css" rel="stylesheet">
-    <title>Trello Clone</title>
-</head>
-
-<body>
-    <textarea class="heading" rows="1" readonly>Project Management</textarea>
+  <body>
+    <textarea class="heading" rows="1" readonly>Task Management</textarea>
     <main class="main-container">
-        <section class="task-section">
-            <h2 class="task-heading">To Do</h2>
-          <div class="drag-container">
+      <section class="task-section">
+        <h2 class="task-heading">To Do</h2>
+        <div class="drag-container"></div>
+        <div class="add-task-section">
+          <div class="add-card">
+            <button type="button" class="add-card-btn">
+              <i class="fa-solid fa-plus fa-fade">Add Task</i>
+            </button>
           </div>
-            <div class="add-task-section">
-            <div class="add-card">
-                <button type="button" class="add-card-btn">
-                    <i class="fa-solid fa-plus fa-fade">Add Task</i>
-                </button>
-            </div>
-            <div class="add-task-container">
-                <input class="task-title task-input" type="text" placeholder="Enter the task">
-                <input class="task-description task-input" type="text" placeholder="Enter the description">
-                <button class="save-button" type="button">Save</button>
-                </div>
-            </div>
-            
-        </section>
+          <div class="add-task-container">
+            <input
+              class="task-title task-input"
+              type="text"
+              placeholder="Enter the task"
+            />
+            <input
+              class="task-description task-input"
+              type="text"
+              placeholder="Enter the description"
+            />
+            <button class="save-button" type="button">Save</button>
+          </div>
+        </div>
+      </section>
 
-        <section class="task-section">
-            <h2 class="task-heading">In Progress</h2>
-            <div class="drag-container">
+      <section class="task-section">
+        <h2 class="task-heading">In Progress</h2>
+        <div class="drag-container"></div>
+        <div class="add-task-section">
+          <div class="add-card">
+            <button type="button" class="add-card-btn">
+              <i class="fa-solid fa-plus fa-fade">Add Task</i>
+            </button>
+          </div>
+          <div class="add-task-container">
+            <input
+              class="task-title task-input"
+              type="text"
+              placeholder="Enter the task"
+            />
+            <input
+              class="task-description task-input"
+              type="text"
+              placeholder="Enter the description"
+            />
+            <button class="save-button" type="button">Save</button>
+          </div>
+        </div>
+      </section>
 
-            </div>
-            <div class="add-task-section">
-            <div class="add-card">
-                <button type="button" class="add-card-btn">
-                    <i class="fa-solid fa-plus fa-fade">Add Task</i>
-                </button>
-            </div>
-            <div class="add-task-container">
-                <input class="task-title task-input" type="text" placeholder="Enter the task">
-                <input class="task-description task-input" type="text" placeholder="Enter the description">
-                <button class="save-button" type="button">Save</button>
-                </div>
-              </div> 
-              
-        </section>
-
-        <section class="task-section">
-            <h2 class="task-heading">Completed</h2>
-            <div class="drag-container">
-
-            </div>
-            <div class="add-task-section">
-            <div class="add-card">
-                <button type="button" class="add-card-btn">
-                    <i class="fa-solid fa-plus fa-fade">Add Task</i>
-                </button>
-            </div>
-            <div class="add-task-container">
-                <input class="task-title task-input" type="text" placeholder="Enter the task">
-                <input class="task-description task-input" type="text" placeholder="Enter the description">
-                <button class="save-button" type="button">Save</button>
-                </div>
-            </div>
-            
-        </section>
+      <section class="task-section">
+        <h2 class="task-heading">Completed</h2>
+        <div class="drag-container"></div>
+        <div class="add-task-section">
+          <div class="add-card">
+            <button type="button" class="add-card-btn">
+              <i class="fa-solid fa-plus fa-fade">Add Task</i>
+            </button>
+          </div>
+          <div class="add-task-container">
+            <input
+              class="task-title task-input"
+              type="text"
+              placeholder="Enter the task"
+            />
+            <input
+              class="task-description task-input"
+              type="text"
+              placeholder="Enter the description"
+            />
+            <button class="save-button" type="button">Save</button>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
-<script src="/app.js"></script>
+  </body>
+  <script src="/app.js"></script>
 </html>
