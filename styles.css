@@ -1,145 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 10px 20px;
-    font-family: 'Oswald', sans-serif;
-    height: 100vh;
-    background: linear-gradient(120deg, #2f22ad, #c7459d);
-    color: white;
+  margin: 10px 20px;
+  font-family: "Oswald", sans-serif;
+  height: 100vh;
+  background: linear-gradient(120deg, #2f22ad, #c7459d);
+  color: white;
 }
 
 .main-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .heading {
-    color: inherit;
-    font-family: inherit;
-    font-size: 40px;
-    margin-bottom: 10px;
-    background: none;
-    border: none;
-    outline: none;
-    resize: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 40px;
+  margin-bottom: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  resize: none;
+  min-width: 500px;
 }
 
 .heading-focus {
-    background: black;
+  background: black;
 }
 
-.task-section { 
-    background: #1c2541;
-    margin: 5px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    min-height: 40vh;
+.task-section {
+  background: #1c2541;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-height: 40vh;
 }
 .task-heading {
-    text-align: center;
-    padding: 5px;
+  text-align: center;
+  padding: 5px;
 }
 .task-container {
-    height: fit-content;
-    background: #3a506b;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 5px;
+  height: fit-content;
+  background: #3a506b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 .add-card {
-    align-self: flex-start;
-    width: 90%;
-    padding-bottom: 30px;
-    border-bottom: 2px solid white;
-    margin: 2px 5px;
+  align-self: flex-start;
+  width: 90%;
+  padding-bottom: 30px;
+  border-bottom: 2px solid white;
+  margin: 2px 5px;
 }
 
 .add-task-section {
-    position: relative;
-    width: 100%;
-    min-height: 100px;
-    margin-bottom: 5px;
-    background: #0b132b;
-    border-radius: 5px;
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 5px;
+  background: #0b132b;
+  border-radius: 5px;
 }
 
 .add-card-btn {
-    background: none;
-    border: none;
-    color: inherit;
+  background: none;
+  border: none;
+  color: inherit;
 }
 
 .add-task-container {
-    display: flex;
-    flex-direction: column;
-    width: 95%;    
-    margin: 2px 5px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 2px 5px;
 }
 
 .task-input {
-    color: white;
-    font-weight: 300;
-    margin: 2px 0;
-    background: #3a506b;
-    outline: none;
-    border: none;
-    font-family: inherit;
-    padding: 5px 0 5px 10px;
-    caret-color: white;
-    overflow-x: scroll;
-    border-radius: 5px;
+  color: white;
+  font-weight: 300;
+  margin: 2px 0;
+  background: #3a506b;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  padding: 5px 0 5px 10px;
+  caret-color: white;
+  overflow-x: scroll;
+  border-radius: 5px;
 }
 
 .task-input::placeholder {
-    color: white;
-    font-weight: 300;
-    opacity: 0.3;
+  color: white;
+  font-weight: 300;
+  opacity: 0.3;
 }
 
 .save-button {
-    background: #026aa7;
-    outline: none;
-    border: none;
-    width: 50px;
-    padding: 5px 0;
-    border-radius: 5px;
-    margin-top: 1px;
+  background: #026aa7;
+  outline: none;
+  border: none;
+  width: 50px;
+  padding: 5px 0;
+  border-radius: 5px;
+  margin-top: 1px;
 }
 
 .task-title-p {
-    font-weight: 400;
-    font-size: 20px;
-    text-transform: capitalize;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 .task-description-p {
-    font-weight: 200;
-    font-size: 14px;
-    font: italic;
-    text-transform: capitalize;
+  font-weight: 200;
+  font-size: 14px;
+  font: italic;
+  text-transform: capitalize;
 }
 
-
-
 .draggable.dragging {
-    opacity: 0.1;
+  opacity: 0.1;
 }
 
 .drag-container {
-    display: flex;
-    flex-direction: column;
-    background: #0b132b;
-    min-height: 40%; 
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  background: #0b132b;
+  min-height: 40%;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
