@@ -10,7 +10,10 @@
 3. Sortable drag and drop feature
 
 ## Images
-1.![Screenshot 1](https://github.com/rshashank11/task-management-js/assets/90172730/df84533f-930e-477b-9194-168c7078d848)
-2. ![Screenshot 2](https://github.com/rshashank11/task-management-js/assets/90172730/ab1a1d86-9607-4c4b-984e-fe3a1e3eb797)
-3. ![Screenshot 3](https://github.com/rshashank11/task-management-js/assets/90172730/a726a3cf-612c-4756-aa1e-5db82dcd747a)
+1. ![Screenshot 1](https://github.com/rshashank11/task-management-js/assets/90172730/20fc0a5a-67d9-4d83-95ba-5e20903021e7)
+
+2. ![Screenshot 2](https://github.com/rshashank11/task-management-js/assets/90172730/af4b7ad5-2364-4bc9-918c-8d29509ce7ee)
+
+3. ![Screenshot 3](https://github.com/rshashank11/task-management-js/assets/90172730/f56d7dbb-230f-4d40-9dfc-c8d1964596a1)
+
 
